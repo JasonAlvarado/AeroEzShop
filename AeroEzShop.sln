@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AeroEzShop.Api", "AeroEzShop.Api\AeroEzShop.Api.csproj", "{FA81441A-5F3F-49C4-AB45-B4D24D31B327}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA81441A-5F3F-49C4-AB45-B4D24D31B327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA81441A-5F3F-49C4-AB45-B4D24D31B327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA81441A-5F3F-49C4-AB45-B4D24D31B327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA81441A-5F3F-49C4-AB45-B4D24D31B327}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CD9E53A-39D8-49E4-8D72-7C26CC17F2F8}
+	EndGlobalSection
+EndGlobal
