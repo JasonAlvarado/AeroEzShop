@@ -1,12 +1,9 @@
-﻿using AeroEzShop.Api.Config;
-using AeroEzShop.Api.Models.Response;
-using AeroEzShop.Api.Service.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Models.Config;
+using Models.Response;
+using Service.Contracts;
 using System.Threading.Tasks;
 
-namespace AeroEzShop.Api.Service
+namespace Service
 {
     public class DollarService : IDollarService
     {

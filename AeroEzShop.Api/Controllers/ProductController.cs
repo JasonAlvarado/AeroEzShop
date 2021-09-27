@@ -1,16 +1,10 @@
-﻿using AeroEzShop.Api.Models;
-using AeroEzShop.Api.Service.Contracts;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.AspNetCore.Mvc;
+using Service.Contracts;
 using System.Threading.Tasks;
 
 namespace AeroEzShop.Api.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ProductController : ControllerBase
+    public class ProductController : BaseController
     {
         private readonly IProductService productService;
 
@@ -20,9 +14,9 @@ namespace AeroEzShop.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get(int page = 1)
         {
-            List<Product> data = await productService.GetProducts();
+            var data = await productService.GetProducts(page);
             return Ok(data);
         }
     }

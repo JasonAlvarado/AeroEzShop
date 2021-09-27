@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace AeroEzShop.Api.Service.Contracts
+namespace Service.Contracts
 {
     public interface IApiService
     {

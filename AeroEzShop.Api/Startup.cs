@@ -1,18 +1,13 @@
 using AeroEzShop.Api.Service;
-using AeroEzShop.Api.Service.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Service;
+using Service.Contracts;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
 
 namespace AeroEzShop.Api
 {
@@ -87,7 +82,9 @@ namespace AeroEzShop.Api
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
+            //app.UseDefaultFiles();
+            //app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AeroEzShop.Api.Models.Response
+namespace Models.Response
 {
     public class DollarResponse
     {

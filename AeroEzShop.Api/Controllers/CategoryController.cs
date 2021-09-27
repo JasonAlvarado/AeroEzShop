@@ -1,13 +1,10 @@
-﻿using AeroEzShop.Api.Models;
-using AeroEzShop.Api.Service.Contracts;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Service.Contracts;
 using System.Threading.Tasks;
 
 namespace AeroEzShop.Api.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CategoryController : ControllerBase
+    public class CategoryController : BaseController
     {
         private readonly ICategoryService categoryService;
 
@@ -17,10 +14,10 @@ namespace AeroEzShop.Api.Controllers
         }
 
         [HttpGet("category_tree")]
-        public async Task<CategoryTree> Get()
+        public async Task<IActionResult> Get()
         {
-            CategoryTree categoryTree = await categoryService.GetCategoriesTree();
-            return categoryTree;
+            var categoryTree = await categoryService.GetCategoriesTree();
+            return Ok(categoryTree);
         }
     }
 }

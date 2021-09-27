@@ -1,15 +1,10 @@
-﻿using AeroEzShop.Api.Config;
-using AeroEzShop.Api.Models;
-using AeroEzShop.Api.Service.Contracts;
-using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using Service.Contracts;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace AeroEzShop.Api.Service
+namespace Service
 {
     public class ApiService : IApiService
     {

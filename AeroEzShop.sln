@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AeroEzShop.Api", "AeroEzShop.Api\AeroEzShop.Api.csproj", "{FA81441A-5F3F-49C4-AB45-B4D24D31B327}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AeroEzShop.Api", "AeroEzShop.Api\AeroEzShop.Api.csproj", "{FA81441A-5F3F-49C4-AB45-B4D24D31B327}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{81576498-E52F-4F37-ACDC-FB66FCC81A74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{FD7B21F6-1A6D-475F-A423-D088A26E5AAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{FA81441A-5F3F-49C4-AB45-B4D24D31B327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA81441A-5F3F-49C4-AB45-B4D24D31B327}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA81441A-5F3F-49C4-AB45-B4D24D31B327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81576498-E52F-4F37-ACDC-FB66FCC81A74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81576498-E52F-4F37-ACDC-FB66FCC81A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81576498-E52F-4F37-ACDC-FB66FCC81A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81576498-E52F-4F37-ACDC-FB66FCC81A74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD7B21F6-1A6D-475F-A423-D088A26E5AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD7B21F6-1A6D-475F-A423-D088A26E5AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD7B21F6-1A6D-475F-A423-D088A26E5AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD7B21F6-1A6D-475F-A423-D088A26E5AAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

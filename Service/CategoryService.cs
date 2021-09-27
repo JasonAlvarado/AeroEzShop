@@ -1,11 +1,12 @@
-﻿using AeroEzShop.Api.Config;
-using AeroEzShop.Api.Models;
-using AeroEzShop.Api.Models.Response;
-using AeroEzShop.Api.Service.Contracts;
+﻿using Models;
+using Models.Config;
+using Models.Response;
+using Service.Contracts;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
-namespace AeroEzShop.Api.Service
+namespace Service
 {
     public class CategoryService : ICategoryService
     {
@@ -26,7 +27,17 @@ namespace AeroEzShop.Api.Service
 
             List<CategoryTreeItem> categoryTreeItems = new List<CategoryTreeItem>();
 
-            // usar recursion
+            foreach (var item in categories)
+            {
+                if (item.ParentId == null)
+                {
+                    categoryTreeItems.Add(new CategoryTreeItem() { Id = item.Id, Name = item.Name, ParentId = null, Subcategories = new List<Category>() });
+                }
+                else
+                {
+                    categoryTreeItems.FirstOrDefault(cat => cat.Id == item.ParentId)?.Subcategories.Add(item);
+                }
+            }
 
             CategoryTree categoryTree = new CategoryTree() { CategoyTreeItems = categoryTreeItems };
             return categoryTree;

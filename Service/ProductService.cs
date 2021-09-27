@@ -1,11 +1,10 @@
-﻿using AeroEzShop.Api.Config;
-using AeroEzShop.Api.Models;
-using AeroEzShop.Api.Models.Response;
-using AeroEzShop.Api.Service.Contracts;
+﻿using Models;
+using Models.Config;
+using Models.Response;
+using Service.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace AeroEzShop.Api.Service
@@ -14,6 +13,7 @@ namespace AeroEzShop.Api.Service
     {
         private readonly IApiService apiService;
         private readonly IDollarService dollarService;
+        private const int DaysInAMonth = 30;
 
         public ProductService(IApiService apiService, IDollarService dollarService)
         {
@@ -21,12 +21,16 @@ namespace AeroEzShop.Api.Service
             this.dollarService = dollarService;
         }
 
-        public async Task<List<Product>> GetProducts()
+        public async Task<List<Product>> GetProducts(int page = 1)
         {
-            ProductResponse productResponse = await apiService.Get<ProductResponse>(ApiPaths.Products);
+            ProductResponse productResponse = await apiService.Get<ProductResponse>($"{ApiPaths.Products}?page={page}");
 
             List<Product> products = productResponse.Products;
-            List<Product> activeProducts = products.Where(prod => (DateTime.Now - prod.UpdatedAt).TotalDays <= 30).ToList();
+
+            if (products == null)
+                return null;
+
+            List<Product> activeProducts = products.Where(prod => (DateTime.Now - prod.UpdatedAt).TotalDays <= DaysInAMonth).ToList();
 
             DollarResponse dollarInfo = await dollarService.GetDollarInfo();
 
