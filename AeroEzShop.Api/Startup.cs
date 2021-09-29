@@ -86,6 +86,8 @@ namespace AeroEzShop.Api
             //app.UseDefaultFiles();
             //app.UseStaticFiles();
 
+            app.UseHttpsRedirection();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
